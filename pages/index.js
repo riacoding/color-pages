@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Colors!</title>
+        <title>Static Colors!</title>
         <meta name="description" content="App that displays pretty colors to learn Next!" />
       </Head>
       {colors.map((color) => (
