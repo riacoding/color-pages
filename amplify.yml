@@ -8,7 +8,9 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: echo ${BASE_DIR}
+    baseDirectory: 
+      - if [ "${AWS_BRANCH}" = "main" ]; then echo "out"; fi
+      - if [ "${AWS_BRANCH}" = "ssr" ]; then echo ".next"; fi
     files:
       - '**/*'
   cache:
