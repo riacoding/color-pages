@@ -10,7 +10,7 @@ frontend:
         - npm run build
         - echo "branch file main-$BASE" 
   artifacts:
-    baseDirectory: .next
+    baseDirectory: out
     files:
       - '**/*'
   cache:
